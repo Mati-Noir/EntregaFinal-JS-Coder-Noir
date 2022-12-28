@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreEntrega1-Noir</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link del CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- titulo de la pestaña -->
+    <title>Menu Principal</title>
+
+    <!-- link de los iconos -->
+    <script
+      src="https://kit.fontawesome.com/df59baf6b8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+
+<!-- Sector Navbar -->
+
+    <nav class="navbar">
+      <div class="logo">Logo Marca</div>
+      <a href="#" class="navbar_desplegable">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Carrito</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Sector Header -->
+
+    <header>
+      <h1 id="titulo" class="titulo">Productos Disponibles</h1>
+      <button id="boton-carrito">
+        <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
+      </button>
+    </header>
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Sector Main -->
+
+    <main id="contenedor-productos"></main>
+
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor"></div>
+        <p class="precioProducto">
+          Precio total: $<span id="precioTotal">0</span>
+        </p>
+        <button id="vaciar-carrito" class="boton-agregar">
+          Vaciar carrito
+        </button>
+      </div>
+    </div>
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Sector footer -->
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>Noir & Company 2022 ©</h3>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Políticas de Privacidad</a>
+        <a href="#">Sobre Nosotros</a>
+        <ul class="redes_sociales">
+          <li>
+            <a href="https://www.facebook.com/Coderhouse/" target="_blank"
+              ><i class="bi bi-facebook"> Facebook</i></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/coderhouse/?hl=es"
+              target="_blank"
+              ><i class="bi bi-instagram"> Instagram</i></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/coderhouse?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              target="_blank"
+              ><i class="bi bi-twitter"> Twitter</i></a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- link al archivo JS -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

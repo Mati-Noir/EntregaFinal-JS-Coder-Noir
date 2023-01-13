@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu Principal</title>
-
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
 
     <!-- link del CSS -->
     <link rel="stylesheet" href="../style.css" />
@@ -19,7 +12,7 @@
     <link rel="stylesheet" href="../Css/EstiloOscuro.css" />
 
     <!-- titulo de la pestaña -->
-    <title>Menu Principal</title>
+    <title>Productos</title>
 
     <!-- link de los iconos -->
     <script
@@ -32,15 +25,14 @@
 
     <!-- ------------------------------------------------------------------------------------- -->
     <!-- Sector Navbar -->
-    
     <nav class="navbar">
-      <a href="index.html"
+      <a href="../index.html"
         ><img
           src="https://mati-noir.github.io/Noir-Photography/images/Logo2.png"
           alt=""
           class="index-logo"
       /></a>
-      <a href="index.html" class="navbar_desplegable">
+      <a href="#" class="navbar_desplegable">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -55,53 +47,33 @@
     </nav>
 
     <!-- ------------------------------------------------------------------------------------- -->
-    <!-- Sector Swiper Carousel-->
+    <!-- Sector Header -->
 
     <header>
+      <h1 id="titulo" class="titulo">Productos Disponibles</h1>
       <a id="darkmode" href="javascript:void(0)">Modo oscuro</a>
+      <button id="boton-carrito">
+        <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
+      </button>
     </header>
 
     <!-- ------------------------------------------------------------------------------------- -->
-    <!-- Sector Swiper Carousel-->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img
-            src="https://www.irrompibles.net/irrwp/wp-content/uploads/2022/01/hx-ces-2022-group-shot-1920x1170-1.jpg"
-            alt=""
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://wallpaperaccess.com/full/894994.jpg" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://www.precio-calidad.com.ar/wp-content/uploads/2019/03/SliderMarca_Redragon-5.png"
-            alt=""
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://www.muycomputer.com/wp-content/uploads/2020/03/Portada-3-1-e1584548930901.jpg"
-            alt=""
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/buy/geforce-rtx-40-series-hero-banner-bb580_440-d.jpg"
-            alt=""
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://infosertecblog.files.wordpress.com/2022/06/220604-1.jpg"
-            alt=""
-          />
-        </div>
+    <!-- Sector Main -->
+
+    <main id="contenedor-productos"></main>
+
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor"></div>
+        <p class="precioProducto">
+          Precio total: $<span id="precioTotal">0</span>
+        </p>
+        <button id="vaciar-carrito" class="boton-agregar">
+          Vaciar carrito
+        </button>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
 
     <!-- ------------------------------------------------------------------------------------- -->
@@ -110,6 +82,10 @@
     <footer class="footer">
       <div class="footer-content">
         <h3>Noir & Company 2022 ©</h3>
+        <h4><i class="fa fa-phone"></i> Telefono: 115 - 2202 - 9350</h4>
+        <h4><i class="fa fa-envelope"></i> Julio@LaTercera.com</h4>
+        <h4><i class="fa fa-map-marked"></i> Ohio, Estados Unidos</h4>
+        <br>
         <a href="#">Términos y Condiciones</a>
         <a href="#">Políticas de Privacidad</a>
         <a href="#">Sobre Nosotros</a>
@@ -137,28 +113,8 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-      var swiper = new Swiper(".swiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>    
-
+    <!-- link al archivo JS -->
     <script src="../Javascript/ModoOscuro.js"></script>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>

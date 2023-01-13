@@ -19,7 +19,7 @@ const productos = [
       "Disco Solido marca Kingston de una capacidad de almacenamiento de 240gb, apto para notebooks como para computadoras de escritorio.",
     categoria: "Discos de almacenamiento",
     oferta: false,
-    img: "https://www.pccompu.com.uy/imgs/productos/productos31_19629.jpg",
+    img: "https://logg.api.cygnus.market/static/logg/Global/Disco%20S%C3%B3lido%20SSD%20Kingston%20A400%20240GB%20SATA%202.5%22/61841aa46a5e4fd3aed964a16601e39f.webp",
     cantidad: 1,
   },
   {
@@ -30,7 +30,7 @@ const productos = [
       "Disco Solido marca Kingston de una capacidad de almacenamiento de 480gb, apto para notebooks como para computadoras de escritorio con una incrementada capacidad de almacenamiento.",
     categoria: "Discos de almacenamiento",
     oferta: false,
-    img: "https://http2.mlstatic.com/D_NQ_NP_932901-MLA49736248519_042022-V.jpg",
+    img: "https://logg.api.cygnus.market/static/logg/Global/Disco%20S%C3%B3lido%20SSD%20Kingston%20A400%20480GB%20SATA%202.5%22/9c91fe32f2a74cd1924e757864de04fb.webp",
     cantidad: 1,
   },
   {
@@ -41,7 +41,7 @@ const productos = [
       "Disco Solido marca Kingston de una capacidad de almacenamiento de 960gb, apto para notebooks como para computadoras de escritorio con un incremento drastico de la capacidad de almacenamiento, capaz de poder correr a gran velocidad hasta los juegos mas demandantes.",
     categoria: "Discos de almacenamiento",
     oferta: true,
-    img: "https://www.toptecnouy.com/imgs/productos/productos31_32701.jpg",
+    img: "https://app.contabilium.com/files/explorer/16277/Productos-Servicios/concepto-5551159.png",
     cantidad: 1,
   },
   {
@@ -63,7 +63,7 @@ const productos = [
       "Disco duro marca Western Digital de una capacidad incrementada de almacenamiento de 2tb, apto para DVR como para computadoras de escritorio",
     categoria: "Discos de almacenamiento",
     oferta: true,
-    img: "https://omnitechperu.com/data/cache/thum_21256hdiwd20ezbx.jpg",
+    img: "https://plataforma.iduo.com.ar/Panelcontenidos/Contenidos/Hdd-disco-rigido-western-digital-2tb-sata-blue-1661876943-0-0.png",
     cantidad: 1,
   },
   {
@@ -74,7 +74,7 @@ const productos = [
       "Disco duro marca Western Digital de una capacidad enorme de almacenamiento de 4tb, apto para DVR como para computadoras de escritorio",
     categoria: "Discos de almacenamiento",
     oferta: true,
-    img: "https://www.computerssalejalapa.com/web/image/product.template/3730/image_256/%5BWD42PURZ%2785B4YY0%5D%20Disco%20Duro%20Interno%20de%203.5%22%20de%204%20TB%20Western%20Digital%20Purple?unique=565094c",
+    img: "https://logg.api.cygnus.market/static/logg/Global/Disco%20Duro%20HDD%204TB%20Western%20Digital%20Purple%20Sata3/d4fa63510a174e0fb08ff63161e2fc40.png",
     cantidad: 1,
   },
   {
@@ -85,7 +85,7 @@ const productos = [
       "Memoria RAM marca Corsair de 8gb de tipo DDR4 de la linea Vengeance LPX.",
     categoria: "Memorias RAM",
     oferta: false,
-    img: "https://cdn.awsli.com.br/1000x1000/404/404053/produto/47075080/d7328a19ad.jpg",
+    img: "https://www.invidcomputers.com/images/000000000041056567907-CMK8GX4M1A2666C16-Gallery-VENG-LPX-BLK-01.png",
     cantidad: 1,
   },
   {
@@ -96,7 +96,7 @@ const productos = [
       "Memoria RAM marca Corsair de 16gb de tipo DDR4 de la linea Vengeance LPX.",
     categoria: "Memorias RAM",
     oferta: true,
-    img: "https://www.serialcenter.com.py/fotos/thumbs/1_memoria-ram-8gb-ddr4-3600mhz-corsair-vengeance-pro-rgb-2498.png",
+    img: "https://www.rhaegon.com.ar//wp-content/uploads/2021/11/Corsair-Vengeance-RGB-PRO-8GB-3200Mhz-500x500.png",
     cantidad: 1,
   },
   {
@@ -108,7 +108,7 @@ const productos = [
       "Kit de 2 Memorias RAM DIMM DDR4 16 GB (2x8GB) Corsair Vengeance RGB Pro 3200 Mhz Blancas.",
     categoria: "Memorias RAM",
     oferta: true,
-    img: "https://www.computerssalejalapa.com/web/image/product.template/3050/image_256/%5BCMW16GX4M2C3200C16W%5D%20Kit%20de%202%20Memorias%20RAM%20DIMM%20DDR4%2016%20GB%20%282x8GB%29%20Corsair%20Vengeance%20RGB%20Pro%203200%20Mhz%20Blancas?unique=565094c",
+    img: "https://www.invidcomputers.com/images/0000000000412624000114534-CMW16GX4M2C3200C16W-Gallery-Vegeance-RGB-PRO-WHT-04-2up.webp",
     cantidad: 1,
   },
   {
@@ -120,7 +120,7 @@ const productos = [
       "Placa de video Nvidia TUF Gaming GeForce GTX 16 Series 1650 OC Edition 4gb, consume una potencia 300W, recomendado utilizar una fuente de poder de 700w o superior.",
     categoria: "Placas de video",
     oferta: false,
-    img: "https://m.media-amazon.com/images/I/61GlIFHq5pL._AC_SY355_.jpg",
+    img: "https://www.asus.com/media/global/products/hx9ylvjn9oopchgh/P_setting_xxx_0_90_end_692.png",
     cantidad: 1,
   },
   {
@@ -131,7 +131,7 @@ const productos = [
       "Placa de video Nvidia Palit Dual GeForce RTX 20 Series 2060 8gb, requiere una potencia minima de 550w, recomendado utilizar una fuente de poder de 800w o superior.",
     categoria: "Placas de video",
     oferta: true,
-    img: "https://sampler.com.uy/imgs/productos/productos31_75975.jpg",
+    img: "https://logg.api.cygnus.market/static/logg/Global/Placa%20de%20Video%20Palit%20NVIDIA%20GeForce%20RTX%202060%20SUPER%20DUAL%208GB%20GDDR6%20PCIe%203.0/fdb3bee8af1e44a6b08202b668cc0b36.webp",
     cantidad: 1,
   },
   {
@@ -143,7 +143,7 @@ const productos = [
       "Placa de video Nvidia Zotac Gaming GeForce RTX 30 Series 3080 12gb, requiere una potencia minisma de 750w, recomendado utilizar una fuente de poder de 850w o superior.",
     categoria: "Placas de video",
     oferta: false,
-    img: "https://http2.mlstatic.com/D_NQ_NP_697365-MLA50594077421_072022-O.jpg",
+    img: "https://impomundo.com.ar/wp-content/uploads/2022/10/Perfil.png",
     cantidad: 1,
   },
   {
@@ -154,7 +154,7 @@ const productos = [
       "Fuente de poder Thermaltake de 700w, ideal para soportar las placas de video intermedias series 16.",
     categoria: "Fuentes de Poder",
     oferta: false,
-    img: "https://www.alltec.cl/5795-home_default/fuente-poder-thermaltake-smart-700w-80plus-white-spd-0700p.jpg",
+    img: "https://logg.api.cygnus.market/static/logg/Global/Fuente_Thermaltake_Smart_700W_80_White/7efddf24f59d44079bd3f1abc1fcdeb2.webp",
     cantidad: 1,
   },
   {
@@ -165,7 +165,7 @@ const productos = [
       "Fuente de poder Redragon de 800w, ideal para soportar las placas de video superiores series 20.",
     categoria: "Fuentes de Poder",
     oferta: true,
-    img: "https://mla-s1-p.mlstatic.com/619000-MLA49646839879_042022-F.jpg",
+    img: "https://redragon.es/content/uploads/2022/06/GC-PS011-MODULAR-800W.png",
     cantidad: 1,
   },
   {
@@ -176,7 +176,7 @@ const productos = [
       "ASUS - Fuente de alimentación RGB, ROG Thor 850, totalmente modular, 850 W con panel OLED LiveDash",
     categoria: "Fuentes de Poder",
     oferta: true,
-    img: "https://m.media-amazon.com/images/I/41RhiCJvX-L._AC_.jpg",
+    img: "https://dlcdnwebimgs.asus.com/gain/1630FF2A-79C8-44BE-9083-FB857ABD9AE7/w717/h525",
     cantidad: 1,
   },
 ];
@@ -189,7 +189,6 @@ let carrito = [];
 const contenedorProductos = document.getElementById("contenedor-productos");
 const contenedorCarrito = document.getElementById("carrito-contenedor");
 const botonVaciar = document.getElementById("vaciar-carrito");
-
 
 // ---------------------------------------------------------------------------
 // DOM de cada uno de los productos dentro del array productos
@@ -212,7 +211,6 @@ productos.forEach((producto) => {
   });
 });
 
-
 // ---------------------------------------------------------------------------
 // Sector Agregar productos al carrito
 
@@ -231,7 +229,6 @@ const agregarAlCarrito = (prodId) => {
   actualizarCarrito();
 };
 
-
 // ---------------------------------------------------------------------------
 // Sector eliminar productos del carrito
 
@@ -247,7 +244,6 @@ botonVaciar.addEventListener("click", () => {
   carrito.length = 0;
   actualizarCarrito();
 });
-
 
 // ---------------------------------------------------------------------------
 // Sector mostrar productos dentro del carrito
@@ -282,7 +278,6 @@ const precioTotal = document.getElementById("precioTotal");
 const cantidadTotal = document.getElementById("cantidadTotal");
 const contadorCarrito = document.getElementById("contadorCarrito");
 
-
 // ---------------------------------------------------------------------------
 // modal - popup del carrito
 
@@ -290,7 +285,6 @@ const contenedorModal = document.getElementsByClassName("modal-contenedor")[0];
 const botonAbrir = document.getElementById("boton-carrito");
 const botonCerrar = document.getElementById("carritoCerrar");
 const modalCarrito = document.getElementsByClassName("modal-carrito")[0];
-
 
 // ---------------------------------------------------------------------------
 // eventos de los botones dentro y fuera del modal
@@ -309,7 +303,6 @@ modalCarrito.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-
 // ---------------------------------------------------------------------------
 // carga de datos al localStorage
 
@@ -318,4 +311,29 @@ document.addEventListener("DOMContentLoaded", () => {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     actualizarCarrito();
   }
+});
+
+// ---------------------------------------------------------------------------
+// Swiper Carousel Index
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });

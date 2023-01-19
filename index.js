@@ -217,6 +217,22 @@ if (vaciarCarrito) {
   vaciarCarrito.addEventListener("click", () => {
     carrito.length = [];
     mostrarCarrito();
+    Toastify({
+      text: "Carrito vaciado",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "left", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #E38822, #E34422)",
+        borderRadius: "10px",
+        textTransform: "uppercase",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
   });
 }
 
@@ -260,6 +276,22 @@ productos.forEach((prod) => {
 // Sector Agregar productos al carrito
 
 const agregarProducto = (id) => {
+  Toastify({
+    text: "Agregado al carrito",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      borderRadius: "10px",
+      textTransform: "uppercase",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
   const existe = carrito.some(prod => prod.id === id)
 
   if(existe){
@@ -333,6 +365,22 @@ function guardarStorage() {
 // Sector eliminar productos del carrito
 
 function eliminarProducto(id) {
+  Toastify({
+    text: "Producto eliminado",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #E38822, #E34422)",
+      borderRadius: "10px",
+      textTransform: "uppercase",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
   const productoId = id;
   carrito = carrito.filter((producto) => producto.id !== productoId);
   mostrarCarrito();

@@ -25,8 +25,24 @@ formulario.addEventListener("submit", enviar=>{
 
     if(entrar){
         Aviso.innerHTML = MensajeError
+        Swal.fire({
+            title: 'Houston, tenemos un problema',
+            text: 'Los datos introducidos no son validos.',
+            imageUrl: 'https://i.pinimg.com/originals/50/6e/e2/506ee22b38ada4c5390498809fca404f.jpg',
+            imageWidth: 400,
+            imageHeight: 250,
+            imageAlt: 'Custom image',
+          })
     }else{
         Aviso.innerHTML = "Mensaje Enviado"
+        Swal.fire({
+            title: 'Exito',
+            text: 'El formulario ha sido enviado.',
+            imageUrl: 'https://media.tenor.com/y2JXkY1pXkwAAAAC/cat-computer.gif',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
     }
 })
 

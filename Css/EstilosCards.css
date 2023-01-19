@@ -1,0 +1,30 @@
+.estructura-cards-index{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.card{
+    border: 4px solid orange;
+}
+
+.card p{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.card h5{
+    font-size: 180%;
+    font-weight: bold;
+}
+
+.titulo-index{
+    font-size: 250%;
+    text-align: center;
+    margin: 10px;
+    font-style: italic;
+  }

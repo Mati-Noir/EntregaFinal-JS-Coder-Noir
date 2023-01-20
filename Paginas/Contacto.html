@@ -19,14 +19,15 @@
     <title>Menu Principal</title>
 
     <!-- link de los iconos -->
+
     <script
       src="https://kit.fontawesome.com/df59baf6b8.js"
       crossorigin="anonymous"
     ></script>
+    
   </head>
   <body>
     <nav class="navbar">
-      <!-- <div class="logo">Logo Marca</div> -->
       <a href="../index.html"
         ><img
           src="https://mati-noir.github.io/Noir-Photography/images/Logo2.png"
@@ -48,30 +49,65 @@
     </nav>
 
     <div class="estructura-formulario">
-
       <div class="informacion-contacto">
         <h2>Contáctanos</h2>
-        <p>Desde nuestra empresa, nos interesa conocer tu opinion sobre el servicio prestado para que podamos saber como ofrecer al cliente la mejor atencion y experiencia de uso. Ante cualquier situacion, no duda en consultarnos.</p>
-        <a href="https://pbs.twimg.com/media/E8ozthsWQAMproa.jpg" target="_blank"><i class="fa fa-phone"></i> 115 - 2202 - 9350</a>
-        <a href="https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-12/Lionel%20Messi%20Argentina%20World%20Cup%202022%202.jpeg?itok=9EclPFc7" target="_blank"><i class="fa fa-envelope"></i> Julio@LaTercera.com</a>
-        <a href="https://www.google.com/maps/place/Ohio,+EE.+UU./@40.3459212,-84.9121421,7z/data=!3m1!4b1!4m5!3m4!1s0x8836e97ab54d8ec1:0xe5cd64399c9fd916!8m2!3d40.4172871!4d-82.907123" target="_blank"><i class="fa fa-map-marked"></i> Ohio, Estados Unidos</a>
+        <p>
+          Desde nuestra empresa, nos interesa conocer tu opinion sobre el
+          servicio prestado para que podamos saber como ofrecer al cliente la
+          mejor atencion y experiencia de uso. Ante cualquier situacion, no duda
+          en consultarnos.
+        </p>
+        <a
+          href="https://pbs.twimg.com/media/E8ozthsWQAMproa.jpg"
+          target="_blank"
+          ><i class="fa fa-phone"></i> 115 - 2202 - 9350</a
+        >
+        <a
+          href="https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-12/Lionel%20Messi%20Argentina%20World%20Cup%202022%202.jpeg?itok=9EclPFc7"
+          target="_blank"
+          ><i class="fa fa-envelope"></i> Julio@LaTercera.com</a
+        >
+        <a
+          href="https://www.google.com/maps/place/Ohio,+EE.+UU./@40.3459212,-84.9121421,7z/data=!3m1!4b1!4m5!3m4!1s0x8836e97ab54d8ec1:0xe5cd64399c9fd916!8m2!3d40.4172871!4d-82.907123"
+          target="_blank"
+          ><i class="fa fa-map-marked"></i> Ohio, Estados Unidos</a
+        >
       </div>
 
       <form action="" method="POST" id="formulario" autocomplete="off">
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Tu Nombre"
+          class="campo"
+          id="name"
+        />
 
-        <input type="text" name="nombre" placeholder="Tu Nombre" class="campo" id="name">
+        <input
+          type="email"
+          name="email"
+          placeholder="Tu Email"
+          class="campo"
+          id="Email"
+        />
 
-        <input type="email" name="email" placeholder="Tu Email" class="campo" id="Email">
+        <textarea
+          name="mensaje"
+          placeholder="Tu Mensaje..."
+          id="mensaje"
+        ></textarea>
 
-        <textarea name="mensaje" placeholder="Tu Mensaje..." id="mensaje"></textarea>
-
-        <input type="submit" name="enviar" value="Enviar Mensaje" class="boton-enviar">
+        <input
+          type="submit"
+          name="enviar"
+          value="Enviar Mensaje"
+          class="boton-enviar"
+        />
 
         <p class="MensajeError" id="MensajeError"></p>
-
       </form>
-
     </div>
+
     <!-- Sector footer -->
 
     <footer class="footer">
@@ -80,7 +116,7 @@
         <h4><i class="fa fa-phone"></i> Telefono: 115 - 2202 - 9350</h4>
         <h4><i class="fa fa-envelope"></i> Julio@LaTercera.com</h4>
         <h4><i class="fa fa-map-marked"></i> Ohio, Estados Unidos</h4>
-        <br>
+        <br />
         <a href="#">Términos y Condiciones</a>
         <a href="#">Políticas de Privacidad</a>
         <a href="#">Sobre Nosotros</a>

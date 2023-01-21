@@ -286,57 +286,56 @@ function procesarPedido() {
 // ---------------------------------------------------------------------------
 // Sector notificacion de compra al mail - sweet alert error - spinner de carga
 
- function enviarCompra(e){
-   e.preventDefault()
-   const cliente = document.querySelector('#cliente').value
-   const email = document.querySelector('#correo').value
+function enviarCompra(e) {
+  e.preventDefault();
+  const cliente = document.querySelector("#cliente").value;
+  const email = document.querySelector("#correo").value;
 
-   if(email === '' || cliente == ''){
-     Swal.fire({
-       title: "Necesitamos un nombre y un mail para la compra",
-       text: "Primero rellena el formulario y segundo Francia",
-       icon: "error",
-       confirmButtonText: "Aceptar",
-   })
- } else {
-
-  const btn = document.getElementById('button');
-
-   btn.value = 'Enviando...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_qxwi0jn';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Finalizar compra';
-      alert('Correo enviado!');
-    }, (err) => {
-      btn.value = 'Finalizar compra';
-      alert(JSON.stringify(err));
+  if (email === "" || cliente == "") {
+    Swal.fire({
+      title: "Necesitamos un nombre y un mail para la compra",
+      text: "Primero rellena el formulario y segundo Francia",
+      icon: "error",
+      confirmButtonText: "Aceptar",
     });
-    
-   const spinner = document.querySelector('#spinner')
-   spinner.classList.add('d-flex')
-   spinner.classList.remove('d-none')
+  } else {
+    const spinner = document.querySelector("#spinner");
+    spinner.classList.add("d-flex");
+    spinner.classList.remove("d-none");
 
-   setTimeout(() => {
-     spinner.classList.remove('d-flex')
-     spinner.classList.add('d-none')
-     formulario.reset()
+    setTimeout(() => {
+      spinner.classList.remove("d-flex");
+      spinner.classList.add("d-none");
+      formulario.reset();
+    }, 3000)
 
-     const alertExito = document.createElement('p')
-     alertExito.classList.add('alert', 'alerta', 'd-block', 'text-center', 'col-12', 'mt-2', 'alert-success')
-     alertExito.textContent = 'Compra realizada correctamente'
-     formulario.appendChild(alertExito)
+    const alertExito = document.createElement("p");
+    alertExito.classList.add(
+      "alert",
+      "alerta",
+      "d-block",
+      "text-center",
+      "col-12",
+      "mt-2",
+      "alert-success"
+    );
+    alertExito.textContent = "Compra realizada correctamente";
+    formulario.appendChild(alertExito);
 
-     setTimeout(() => {
-       alertExito.remove()
-     }, 3000)
+    setTimeout(() => {
+      alertExito.remove();
+      Swal.fire({
+        title: 'Compra Exitosa',
+        text: 'Su compra se ha realizado correctamente.',
+        imageUrl: 'https://media1.giphy.com/media/GeimqsH0TLDt4tScGw/giphy.gif?cid=790b76118ee31a4fe1c5a3fcff04e15bf4389bcdb38f8ed4&rid=giphy.gif&ct=g',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+    }, 3000);
 
+  };
 
-   }, 3000)
- }
- localStorage.clear()
-
- }
+  localStorage.clear();
+  
+  }

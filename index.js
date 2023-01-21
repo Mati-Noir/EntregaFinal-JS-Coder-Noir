@@ -17,6 +17,7 @@ fetch("../Json/productos.json")
     .then(data => {
         productos = data;
         cargarProductos(productos);
+        productosIndex(productos);
     })
 
 let carrito = [];
@@ -109,12 +110,37 @@ function cargarProductos(productos){
         <p class="card-text-precio">$ ${precio}</p>
         <p class="card-text-descripcion"> ${descripcion}</p>
         <p class="card-text-cantidad">Cantidad: ${cantidad}</p>
-        <button class="btn btn-dark" onclick="agregarProducto(${id})">Comprar Producto</button>
+        <button class="btn btn-dark" onclick="agregarProducto(${id})">Agregar al Carrito</button>
       </div>
     </div>
       `;
     }
   })};
+
+// ---------------------------------------------------------------------------
+// DOM de los productos destacados del index
+
+const contenedorIndex = document.querySelector("#contenedor-index");
+
+function productosIndex(productos){
+  productos.forEach((producto) => {
+    const { id, nombre, precio, img } = producto;
+    if(producto.oferta === true){
+      if (contenedorIndex) {
+        contenedorIndex.innerHTML += `
+        <div class="card mt-3" id="estructura-cards-index" style="width: 25rem;">
+        <img class="card-img-top mt-2" src="${img}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">${nombre}</h5>
+          <p class="card-text-precio">$ ${precio}</p>
+          <button class="btn btn-dark" onclick="agregarProducto(${id})">Agregar al Carrito</button>
+        </div>
+      </div>
+        `;
+      }
+    }
+  })
+}
 
 // ---------------------------------------------------------------------------
 // Sector Agregar productos al carrito

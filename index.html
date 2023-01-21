@@ -12,6 +12,15 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
 
+    <!-- Link Iconos Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Link Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!-- link del Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
@@ -47,7 +56,7 @@
           alt=""
           class="index-logo"
       /></a>
-      <a href="index.html" class="navbar_desplegable">
+      <a href="#" class="navbar_desplegable">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -57,6 +66,18 @@
           <li><a href="../Paginas/Productos.html">Productos</a></li>
           <li><a href="../Paginas/Carrito.html">Carrito</a></li>
           <li><a href="../Paginas/Contacto.html">Contacto</a></li>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+              >
+                <i class="bi bi-cart mx-5" id="carritoContenedor">0</i>
+              </a>
+            </li>
+          </ul>
         </ul>
       </div>
     </nav>
@@ -70,6 +91,7 @@
 
     <!-- ------------------------------------------------------------------------------------- -->
     <!-- Sector Swiper Carousel-->
+
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -115,66 +137,11 @@
       <h2>Productos Destacados</h2>
     </div>
 
-  <!-- Swiper JS -->
+    <!-- Productos Destacados en el index -->
 
-  <main>
-    <div class="estructura-cards-index">
-    <div class="card" style="width: 500px;">
-      <img src="https://logg.api.cygnus.market/static/logg/Global/Disco%20S%C3%B3lido%20SSD%20Kingston%20A400%20240GB%20SATA%202.5%22/61841aa46a5e4fd3aed964a16601e39f.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Disco solido Kingston 240gb</h5>
-        <p class="card-text">$8000.</p>
-        <a href="../Paginas/Productos.html" class="btn btn-dark">Ir a Productos</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 500px;">
-      <img src="https://logg.api.cygnus.market/static/logg/Global/Disco%20S%C3%B3lido%20SSD%20Kingston%20A400%20480GB%20SATA%202.5%22/9c91fe32f2a74cd1924e757864de04fb.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Disco solido Kingston 480gb</h5>
-        <p class="card-text">$15000</p>
-        <a href="../Paginas/Productos.html" class="btn btn-dark">Ir a Productos</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 500px;">
-      <img src="https://plataforma.iduo.com.ar/Panelcontenidos/Contenidos/Hdd-disco-rigido-western-digital-2tb-sata-blue-1661876943-0-0.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Disco duro Western Digital Blue 2tb</h5>
-        <p class="card-text">$17000</p>
-        <a href="../Paginas/Productos.html" class="btn btn-dark">Ir a Productos</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 500px;">
-      <img src="https://www.rhaegon.com.ar//wp-content/uploads/2021/11/Corsair-Vengeance-RGB-PRO-8GB-3200Mhz-500x500.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Memoria RAM Corsair Vengeance Pro RGB Black 16gb</h5>
-        <p class="card-text">$30000</p>
-        <a href="../Paginas/Productos.html" class="btn btn-dark">Ir a Productos</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 500px;">
-      <img src="https://www.asus.com/media/global/products/hx9ylvjn9oopchgh/P_setting_xxx_0_90_end_692.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Placa de video Nvidia ASUS TUF Gaming GeForce GTX 16 Series 1650 OC Edition 4gb</h5>
-        <p class="card-text">$100000</p>
-        <a href="../Paginas/Productos.html" class="btn btn-dark">Ir a Productos</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 500px;">
-      <img src="https://logg.api.cygnus.market/static/logg/Global/Fuente_Thermaltake_Smart_700W_80_White/7efddf24f59d44079bd3f1abc1fcdeb2.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Fuente de Poder Thermaltake Smart White 700w 80 plus</h5>
-        <p class="card-text">$31000</p>
-        <a href="../Paginas/Productos.html" class="btn btn-dark">Ir a Productos</a>
-      </div>
-    </div>
-  </div>
-
-  </main>
+    <main>
+      <div class="row mt-5" id="contenedor-index"></div>
+    </main>
 
     <!-- ------------------------------------------------------------------------------------- -->
     <!-- Sector footer -->
@@ -213,6 +180,8 @@
       </div>
     </footer>
 
+<!-- Sector scripts archivos js y funcion del autoplay -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
@@ -235,8 +204,10 @@
     </script>    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="../Javascript/bootstrap.bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="../Javascript/ModoOscuro.js"></script>
-<script src="../Javascript/swiper.js"></script>
 <script src="index.js"></script>
   </body>
 </html>

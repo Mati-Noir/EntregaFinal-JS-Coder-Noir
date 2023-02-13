@@ -6,28 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
 
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-
-    <!-- link del CSS -->
     <link rel="stylesheet" href="../style.css" />
 
-    <!-- titulo de la pestaña -->
-    <title>Menu Principal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
-    <!-- link de los iconos -->
-
-    <script
-      src="https://kit.fontawesome.com/df59baf6b8.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
     
   </head>
+
   <body>
-    <nav class="navbar">
+
+        <nav class="navbar">
       <a href="../index.html"
         ><img
           src="https://mati-noir.github.io/Noir-Photography/images/Logo2.png"
@@ -44,34 +33,35 @@
           <li><a href="../Paginas/Productos.html">Productos</a></li>
           <li><a href="../Paginas/Carrito.html">Carrito</a></li>
           <li><a href="../Paginas/Contacto.html">Contacto</a></li>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+              >
+                <i class="bi bi-cart mx-5" id="carritoContenedor">0</i>
+              </a>
+            </li>
+          </ul>
         </ul>
       </div>
     </nav>
+
 
     <div class="estructura-formulario">
       <div class="informacion-contacto">
         <h2>Contáctanos</h2>
         <p>
-          Desde nuestra empresa, nos interesa conocer tu opinion sobre el
+          Desde nuestra empresa, nos interesa conocer tu opinión sobre el
           servicio prestado para que podamos saber como ofrecer al cliente la
-          mejor atencion y experiencia de uso. Ante cualquier situacion, no duda
+          mejor atención y experiencia de uso. Ante cualquier situación, no duda
           en consultarnos.
         </p>
-        <a
-          href="https://pbs.twimg.com/media/E8ozthsWQAMproa.jpg"
-          target="_blank"
-          ><i class="fa fa-phone"></i> 115 - 2202 - 9350</a
-        >
-        <a
-          href="https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-12/Lionel%20Messi%20Argentina%20World%20Cup%202022%202.jpeg?itok=9EclPFc7"
-          target="_blank"
-          ><i class="fa fa-envelope"></i> Julio@LaTercera.com</a
-        >
-        <a
-          href="https://www.google.com/maps/place/Ohio,+EE.+UU./@40.3459212,-84.9121421,7z/data=!3m1!4b1!4m5!3m4!1s0x8836e97ab54d8ec1:0xe5cd64399c9fd916!8m2!3d40.4172871!4d-82.907123"
-          target="_blank"
-          ><i class="fa fa-map-marked"></i> Ohio, Estados Unidos</a
-        >
+        <h3><i class="fa fa-phone"></i> 115 - 2202 - 9350</h3>
+        <h3><i class="fa fa-envelope"></i> Julio@LaTercera.com</h3>
+        <h3><i class="fa fa-map-marked"></i> Ohio, Estados Unidos</h3>
       </div>
 
       <form action="" method="POST" id="formulario" autocomplete="off">
@@ -108,8 +98,6 @@
       </form>
     </div>
 
-    <!-- Sector footer -->
-
     <footer class="footer">
       <div class="footer-content">
         <h3>Noir & Company 2022 ©</h3>
@@ -144,6 +132,8 @@
       </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script src="../Javascript/bootstrap.bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../Javascript/ValidarForm.js"></script>
     <script src="../index.js"></script>

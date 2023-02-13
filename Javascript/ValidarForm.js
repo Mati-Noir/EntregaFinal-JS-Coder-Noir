@@ -1,7 +1,7 @@
 const nombre = document.getElementById("name")
 const email = document.getElementById("Email")
 const textoMensaje = document.getElementById("mensaje")
-const formulario = document.getElementById("formulario")
+/* const formulario = document.getElementById("formulario") */
 const Aviso = document.getElementById("MensajeError")
 
 formulario.addEventListener("submit", enviar=>{
@@ -45,7 +45,3 @@ formulario.addEventListener("submit", enviar=>{
           })
     }
 })
-
-// Fuente de la forma de validacion del mail
-// https://www.w3resource.com/javascript/form/email-validation.php
-// Siendo la idea de poder aplicar multiples condiciones en un solo lugar.

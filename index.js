@@ -1,5 +1,3 @@
-// boton desplegable del navbar
-
 const navbarDesplegable =
   document.getElementsByClassName("navbar_desplegable")[0];
 const navbarLinks = document.getElementsByClassName("navbar-links")[0];
@@ -8,22 +6,20 @@ navbarDesplegable.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
 
-// listado de productos (Ahora en productos.json)
+
 
 let productos = [];
 
 fetch("../Json/productos.json")
     .then(response => response.json())
     .then(data => {
-        productos = data;
-        cargarProductos(productos);
-        productosIndex(productos);
+        cargarProductos(data);
+        productosIndex(data);
     })
 
 let carrito = [];
 
-// ---------------------------------------------------------------------------
-// variables generales
+
 
 const contenedor = document.querySelector("#contenedor");
 const carritoContenedor = document.querySelector("#carritoContenedor");
@@ -34,8 +30,7 @@ const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
 const formulario = document.querySelector('#procesar-pago')
 
-// ---------------------------------------------------------------------------
-// Funciones globales de activacion
+
 
 if (activarFuncion) {
   activarFuncion.addEventListener("click", procesarPedido);
@@ -51,8 +46,7 @@ if(formulario){
   formulario.addEventListener('submit', enviarCompra)
 }
 
-// ---------------------------------------------------------------------------
-// Funcion de vaciar carrito junto con toastify para notificar al usuario
+
 
 if (vaciarCarrito) {
   vaciarCarrito.addEventListener("click", () => {
@@ -64,21 +58,20 @@ if (vaciarCarrito) {
       destination: "https://github.com/apvarun/toastify-js",
       newWindow: true,
       close: true,
-      gravity: "top", // `top` or `bottom`
-      position: "left", // `left`, `center` or `right`
-      stopOnFocus: true, // Prevents dismissing of toast on hover
+      gravity: "top", 
+      position: "left", 
+      stopOnFocus: true,
       style: {
         background: "linear-gradient(to right, #E38822, #E34422)",
         borderRadius: "10px",
         textTransform: "uppercase",
       },
-      onClick: function(){} // Callback after click
+      onClick: function(){}
     }).showToast();
   });
 }
 
-// ---------------------------------------------------------------------------
-// Aviso de error de compra con sweetAlert
+
 
 if (procesarCompra) {
   procesarCompra.addEventListener("click", () => {
@@ -95,8 +88,7 @@ if (procesarCompra) {
   });
 }
 
-// ---------------------------------------------------------------------------
-// DOM de cada uno de los productos dentro del array productos
+
 
 function cargarProductos(productos){
   productos.forEach((prod) => {
@@ -117,8 +109,7 @@ function cargarProductos(productos){
     }
   })};
 
-// ---------------------------------------------------------------------------
-// DOM de los productos destacados del index
+
 
 const contenedorIndex = document.querySelector("#contenedor-index");
 
@@ -142,8 +133,7 @@ function productosIndex(productos){
   })
 }
 
-// ---------------------------------------------------------------------------
-// Sector Agregar productos al carrito
+
 
 const agregarProducto = (id) => {
   Toastify({
@@ -152,15 +142,15 @@ const agregarProducto = (id) => {
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "top", 
+    position: "left", 
+    stopOnFocus: true, 
     style: {
       background: "linear-gradient(to right, #00b09b, #96c93d)",
       borderRadius: "10px",
       textTransform: "uppercase",
     },
-    onClick: function(){} // Callback after click
+    onClick: function(){} 
   }).showToast();
   const existe = carrito.some(prod => prod.id === id)
 
@@ -178,8 +168,7 @@ const agregarProducto = (id) => {
 
 };
 
-// ---------------------------------------------------------------------------
-// Sector mostrar productos dentro del carrito
+
 
 const mostrarCarrito = () => {
   const modalBody = document.querySelector(".modal .modal-body");
@@ -187,7 +176,6 @@ const mostrarCarrito = () => {
     modalBody.innerHTML = "";
     carrito.forEach((prod) => {
       const { id, nombre, precio, img, cantidad } = prod;
-      console.log(modalBody);
       modalBody.innerHTML += `
       <div class="modal-contenedor">
         <div>
@@ -205,13 +193,11 @@ const mostrarCarrito = () => {
   }
 
   if (carrito.length === 0) {
-    console.log("Nada");
     modalBody.innerHTML = `
     <p class="text-center text-primary parrafo">No hay nada por aca...</p>
     `;
-  } else {
-    console.log("Algo");
   }
+
   carritoContenedor.textContent = carrito.length;
 
   if (precioTotal) {
@@ -224,15 +210,13 @@ const mostrarCarrito = () => {
   guardarStorage();
 };
 
-// ---------------------------------------------------------------------------
-// carga de datos al localStorage
+
 
 function guardarStorage() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-// ---------------------------------------------------------------------------
-// Sector eliminar productos del carrito
+
 
 function eliminarProducto(id) {
   Toastify({
@@ -241,23 +225,22 @@ function eliminarProducto(id) {
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "top", 
+    position: "left", 
+    stopOnFocus: true, 
     style: {
       background: "linear-gradient(to right, #E38822, #E34422)",
       borderRadius: "10px",
       textTransform: "uppercase",
     },
-    onClick: function(){} // Callback after click
+    onClick: function(){} 
   }).showToast();
   const productoId = id;
   carrito = carrito.filter((producto) => producto.id !== productoId);
   mostrarCarrito();
 }
 
-// ---------------------------------------------------------------------------
-// Sector procesar la lista de compra dentro de carrito.html
+
 
 function procesarPedido() {
   carrito.forEach((prod) => {
@@ -283,8 +266,7 @@ function procesarPedido() {
   );
 }
 
-// ---------------------------------------------------------------------------
-// Sector notificacion de compra al mail - sweet alert error - spinner de carga
+
 
 function enviarCompra(e) {
   e.preventDefault();

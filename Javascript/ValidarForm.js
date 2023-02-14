@@ -43,5 +43,6 @@ formularioContacto.addEventListener("submit", enviar=>{
             imageHeight: 200,
             imageAlt: 'Custom image',
           })
+        formularioContacto.reset();
     }
 })

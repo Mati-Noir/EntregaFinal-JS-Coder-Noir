@@ -267,7 +267,10 @@ function procesarPedido() {
   );
 }
 
-
+function limpiarCarrito() {
+  carrito.length = [];
+  localStorage.clear();
+}
 
 function enviarCompra(e) {
   e.preventDefault();
@@ -290,12 +293,14 @@ function enviarCompra(e) {
       spinner.classList.remove("d-flex");
       spinner.classList.add("d-none");
       formulario.reset();
+      limpiarCarrito();
+      procesarPedido();
     }, 3000)
 
     setTimeout(() => {
       Swal.fire({
         title: 'Compra Exitosa',
-        text: 'Su compra se ha realizado correctamente.',
+        text: 'Su compra se ha realizado correctamente. Volviendo al menu principal.',
         imageUrl: 'https://media1.giphy.com/media/GeimqsH0TLDt4tScGw/giphy.gif?cid=790b76118ee31a4fe1c5a3fcff04e15bf4389bcdb38f8ed4&rid=giphy.gif&ct=g',
         imageWidth: 400,
         imageHeight: 200,
@@ -303,7 +308,12 @@ function enviarCompra(e) {
       })
     }, 3000);
 
-    localStorage.clear();
+    setTimeout(() => {
+      window.location.reload()
+      location.href = "../index.html";
+    }, 5000);
+
+/*     localStorage.clear(); */
 
   };
 

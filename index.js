@@ -292,21 +292,7 @@ function enviarCompra(e) {
       formulario.reset();
     }, 3000)
 
-    const alertExito = document.createElement("p");
-    alertExito.classList.add(
-      "alert",
-      "alerta",
-      "d-block",
-      "text-center",
-      "col-12",
-      "mt-2",
-      "alert-success"
-    );
-    alertExito.textContent = "Compra realizada correctamente";
-    formulario.appendChild(alertExito);
-
     setTimeout(() => {
-      alertExito.remove();
       Swal.fire({
         title: 'Compra Exitosa',
         text: 'Su compra se ha realizado correctamente.',
@@ -317,8 +303,8 @@ function enviarCompra(e) {
       })
     }, 3000);
 
+    localStorage.clear();
+
   };
 
-  localStorage.clear();
-  
   }

@@ -1,10 +1,10 @@
 const nombre = document.getElementById("name")
 const email = document.getElementById("Email")
 const textoMensaje = document.getElementById("mensaje")
-/* const formulario = document.getElementById("formulario") */
+const formularioContacto = document.getElementById("formulario")
 const Aviso = document.getElementById("MensajeError")
 
-formulario.addEventListener("submit", enviar=>{
+formularioContacto.addEventListener("submit", enviar=>{
     enviar.preventDefault()
     let MensajeError = ""
     let entrar = false

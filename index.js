@@ -13,8 +13,9 @@ let productos = [];
 fetch("../Json/productos.json")
     .then(response => response.json())
     .then(data => {
-        cargarProductos(data);
-        productosIndex(data);
+      productos = data;
+        cargarProductos(productos);
+        productosIndex(productos);
     })
 
 let carrito = [];
@@ -28,7 +29,8 @@ const precioTotal = document.querySelector("#precioTotal");
 const activarFuncion = document.querySelector("#activarFuncion");
 const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
-const formulario = document.querySelector('#procesar-pago')
+const formulario = document.querySelector('#procesar-pago');
+const contenedorIndex = document.querySelector("#contenedor-index");
 
 
 
@@ -42,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarCarrito();
   document.querySelector("#activarFuncion").click(procesarPedido);
 });
+
 if(formulario){
   formulario.addEventListener('submit', enviarCompra)
 }
@@ -111,12 +114,10 @@ function cargarProductos(productos){
 
 
 
-const contenedorIndex = document.querySelector("#contenedor-index");
-
 function productosIndex(productos){
-  productos.forEach((producto) => {
-    const { id, nombre, precio, img } = producto;
-    if(producto.oferta === true){
+  productos.forEach((prod) => {
+    const { id, nombre, precio, img } = prod;
+    if(prod.oferta === true){
       if (contenedorIndex) {
         contenedorIndex.innerHTML += `
         <div class="card mt-3" id="estructura-cards-index" style="width: 25rem;">
@@ -236,7 +237,7 @@ function eliminarProducto(id) {
     onClick: function(){} 
   }).showToast();
   const productoId = id;
-  carrito = carrito.filter((producto) => producto.id !== productoId);
+  carrito = carrito.filter((prod) => prod.id !== productoId);
   mostrarCarrito();
 }
 
